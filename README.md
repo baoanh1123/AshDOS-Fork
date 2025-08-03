@@ -10,6 +10,11 @@ I saw this script and it was interesting but the main weakness was that it was a
 - Now udhcpc is the main dhcp client that can help to connect network without static ip configuration
 
 ### How to build:
+First run:
+```bash
+sudo ./setup.sh
+```
+After run:
 ```bash
 sudo ./build.sh
 ```
