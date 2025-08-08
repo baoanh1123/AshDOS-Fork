@@ -202,13 +202,13 @@ cat > /mnt/ashdos/init << 'EOF'
 #!/bin/bash
 
 # Set up initial configuration
-mount -t proc proc /proc &
+mount -t proc proc /proc
 mount -t sysfs sysfs /sys
 
 # set up mdev                 
-mdev -s                 
+mdev -s
 echo "/sbin/mdev" > /proc/sys/kernel/hotplug
-
+mdev -d &
 # Find network interface
 INTERFACE=""
 for I in $(ls /sys/class/net)               
